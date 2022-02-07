@@ -10,34 +10,14 @@ package Collections.Task2;
    Для каждого перебора создать свой метод.
  */
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 public class Toy {
-    private static final HashMap<String, String> map = new HashMap<> ( );
 
-    public static void main (String[] args) {
-        map.put ( "жираф" ,"высокий" );
-        map.put ( "зайчик" ,"средний" );
-        map.put ( "бегемот" ,"большой" );
-        map.put ( "мишка" ,"маленький" );
-        System.out.println ( entrySet ( ) );
-        System.out.println ( keySet ( ) );
-        System.out.println ( values ( ) );
+
+    String name;
+    String profile;
+
+    public Toy (String name ,String profile) {
+        this.name = name;
+        this.profile = profile;
     }
-
-    public static Collection<Map.Entry<String, String>> entrySet ( ) {
-        return map.entrySet ( );
-    }
-
-    public static Set<String> keySet ( ) {
-        return map.keySet ( );
-    }
-
-    public static java.util.Collection<String> values ( ) {
-        return map.values ( );
-    }
-
 }

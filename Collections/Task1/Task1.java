@@ -7,30 +7,27 @@ package Collections.Task1;
    Вывести результат на консоль.
  */
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Task1 {
-    private static final ArrayList<Integer> arrayList = new ArrayList<> ( );
+    private static final Set<Character> unique = new LinkedHashSet<> ( );
+    private static final String string = "1, 2, 3, 4, 4, 5, 5, 6, 5, 7, 8, 9, 9";
 
     public static void main (String[] args) {
 
-        arrayList.add ( 1 );
-        arrayList.add ( 2 );
-        arrayList.add ( 3 );
-        arrayList.add ( 4 );
-        arrayList.add ( 4 );
-        arrayList.add ( 5 );
-        arrayList.add ( 5 );
-        arrayList.add ( 6 );
-        arrayList.add ( 5 );
-        arrayList.add ( 7 );
-        arrayList.add ( 8 );
-        arrayList.add ( 9 );
-        arrayList.add ( 9 );
-        System.out.println ( "Первоначальный список: " + arrayList );
-        HashSet<Integer> myHashSet = new HashSet<> ( arrayList );
-        System.out.println ( "Список без повторений: " + myHashSet );
+        System.out.println ( "Пероначальный список: " + string );
+        Chars ();
+    }
 
+    public static void Chars ( ) {
+
+        for (char c : string.toCharArray ( )) {
+            unique.add ( c );
+        }
+        System.out.print ("Список без повторяющихся элементов: ");
+        for (char dis : unique) {
+            System.out.print ( dis + " " );
+        }
     }
 }
