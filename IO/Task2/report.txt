@@ -1,0 +1,1 @@
+[Employee{fullName='Вася', salary=200}, Employee{fullName='Петя', salary=300}, Employee{fullName='Паша', salary=500}]
