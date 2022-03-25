@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class numbersMain {
+public class numbersMain  {
     private static List<Integer> readNumbers;
 
     public static void main (String[] args) {
@@ -36,7 +36,7 @@ public class numbersMain {
     }
 
     public static void writer (List<Integer> numbers) {
-        try (FileOutputStream fos = new FileOutputStream ( "C:\\Users\\Anton\\IdeaProjects\\RushHomeWork\\src\\IO\\Task3\\txt.txt" );
+        try (FileOutputStream fos = new FileOutputStream ( PathSeparator.TEXT.getPath () );
              ObjectOutputStream oos = new ObjectOutputStream ( fos )) {
             oos.writeObject ( numbers );
         } catch (FileNotFoundException e) {
@@ -50,7 +50,7 @@ public class numbersMain {
 
     public static void reader ( ) {
 
-        try (FileInputStream fis = new FileInputStream ( "C:\\Users\\Anton\\IdeaProjects\\RushHomeWork\\src\\IO\\Task3\\txt.txt" );
+        try (FileInputStream fis = new FileInputStream ( PathSeparator.TEXT.getPath () );
              ObjectInputStream ois = new ObjectInputStream ( fis )) {
             readNumbers = (List<Integer>) ois.readObject ( );
 
@@ -72,7 +72,7 @@ public class numbersMain {
     }
 
     public static void sortedNumWriter ( ) {
-        try (FileOutputStream fos = new FileOutputStream ( "C:\\Users\\Anton\\IdeaProjects\\RushHomeWork\\src\\IO\\Task3\\txt1.txt" );
+        try (FileOutputStream fos = new FileOutputStream ( PathSeparator.TEXT1.getPath ( ) );
              ObjectOutputStream oos = new ObjectOutputStream ( fos )) {
             oos.writeObject ( readNumbers );
         } catch (FileNotFoundException e) {

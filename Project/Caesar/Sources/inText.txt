@@ -1,0 +1,3 @@
+Java, modern object-oriented computer programming language. " +
+            "Java was created at Sun Microsystems, Inc., where James Gosling led a team of researchers in an effort to " +
+            "create a new language that would allow consumer electronic devices to communicate with each other. Ура работает!

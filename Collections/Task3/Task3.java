@@ -9,6 +9,7 @@ package Collections.Task3;
    Главное усвловие использовать Map<Key, Value>. Key - символ, Value - количество вхождений.
  */
 
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -24,13 +25,16 @@ public class Task3 {
 
     }
     public static void Chars ( ) {
-
+        long time = System.nanoTime();
         for (int i = 0; i < string.length ( ); i++) {
             char ch = string.charAt ( i );
             charsCount.merge ( ch ,1 ,Integer::sum );
 
+
         }
         System.out.println ( "Колличество символов с строке: " + charsCount );
+        time = System.nanoTime() - time;
+        System.out.printf("Elapsed %,9.3f ms\n", time/1_000_000.0);
 
     }
 }
