@@ -1,4 +1,4 @@
-package Project.Caesar.CaesarCoder;
+package Project.Caesar.сaesarCoder;
 
 public interface Coder {
 

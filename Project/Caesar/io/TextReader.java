@@ -1,8 +1,8 @@
-package Project.Caesar.IO;
+package Project.Caesar.io;
 
 import java.io.*;
 
-public class textReader {
+public class TextReader {
     public void reader (String path) {
         try (FileReader reader = new FileReader ( path );
              BufferedReader inStr = new BufferedReader ( reader )) {

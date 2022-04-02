@@ -1,10 +1,10 @@
-package Project.Caesar.CaesarCoder;
+package Project.Caesar.сaesarCoder;
 
-public class DecoderEng implements Coder {
+public class EncoderEng implements Coder {
 
     @Override
     public char coder (char temp ,int key) {
-        key = -key % 26;
+        key = key % 26;
         char a = 'a';
         char A = 'A';
         char position;
@@ -15,13 +15,11 @@ public class DecoderEng implements Coder {
         } else {
             return temp;
         }
-        if (position + key < 0) {
-            temp = (char) (temp + key + 26);
+        if (position >= (26 - key)) {
+            temp = (char) (temp - (26 - key));
         } else {
             temp = (char) (temp + key);
         }
         return temp;
     }
-
-
 }

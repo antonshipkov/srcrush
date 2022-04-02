@@ -1,16 +1,16 @@
-package Project.Caesar.IO;
+package Project.Caesar.io;
 
-import Project.Caesar.CaesarCoder.Coder;
-import Project.Caesar.CaesarCoder.DecoderChars;
-import Project.Caesar.CaesarCoder.DecoderEng;
-import Project.Caesar.CaesarCoder.DecoderRus;
+import Project.Caesar.сaesarCoder.Coder;
+import Project.Caesar.сaesarCoder.DecoderChars;
+import Project.Caesar.сaesarCoder.DecoderEng;
+import Project.Caesar.сaesarCoder.DecoderRus;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class bruteforceDecode {
+public class BruteforceDecode {
     public void decode (BufferedReader inStr ,PrintWriter outStr ,int outKey) throws IOException {
         String line = inStr.readLine ( );
         StringBuilder textLine = new StringBuilder ( );

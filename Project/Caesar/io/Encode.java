@@ -1,23 +1,23 @@
-package Project.Caesar.IO;
+package Project.Caesar.io;
 
-import Project.Caesar.CaesarCoder.Coder;
-import Project.Caesar.CaesarCoder.DecoderChars;
-import Project.Caesar.CaesarCoder.DecoderEng;
-import Project.Caesar.CaesarCoder.DecoderRus;
+import Project.Caesar.сaesarCoder.Coder;
+import Project.Caesar.сaesarCoder.EncoderChars;
+import Project.Caesar.сaesarCoder.EncoderEng;
+import Project.Caesar.сaesarCoder.EncoderRus;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class Decode {
+public class Encode {
 
-    public void decode (BufferedReader inStr ,PrintWriter outStr ,int key) throws IOException {
+    public void encode (BufferedReader inStr ,PrintWriter outStr ,int key) throws IOException {
         String line = inStr.readLine ( );
         StringBuilder text = new StringBuilder ( );
-        Coder decoderEng = new DecoderEng ( );
-        Coder decoderRus = new DecoderRus ( );
-        Coder decoderChars = new DecoderChars ( );
+        Coder encoderEng = new EncoderEng ( );
+        Coder encoderRus = new EncoderRus ( );
+        Coder encoderChars = new EncoderChars ( );
         StringTokenizer tok;
         while (line != null) {
             tok = new StringTokenizer ( line );
@@ -28,11 +28,11 @@ public class Decode {
                     char c = wordIn.charAt ( i );
                     char o;
                     if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-                        o = decoderEng.coder ( c ,key );
+                        o = encoderEng.coder ( c ,key );
                     } else if ((c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я')) {
-                        o = decoderRus.coder ( c ,key );
+                        o = encoderRus.coder ( c ,key );
                     } else {
-                        o = decoderChars.coder ( c ,key );
+                        o = encoderChars.coder ( c ,key );
                     }
                     wordOut.append ( o );
                 }
